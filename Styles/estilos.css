@@ -1,0 +1,145 @@
+body{
+    margin: 0px;
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(206, 203, 203) ;
+    border-bottom: 1px solid gray;
+    box-shadow: 1px 1px gray;
+}
+
+.navbar >li{
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo{
+    height: 80px;
+}
+
+.button{
+    border: 0px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold; 
+}
+
+.button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+.mainButton{
+    background-color: #15b66b;
+    /* color: white;
+    cursor: pointer;
+    border: 0px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold; */
+    box-shadow: 1px 1px green;
+    color: white
+}
+
+/* Modificador para la clase */
+.mainButton:hover{
+    /* cursor: pointer; */
+    box-shadow: 4px 5px green;
+    /* transform: scale(1.1); */
+}
+
+.secondaryButton{
+    background-color: #4d6aca;
+    color: white;
+    /* cursor: pointer; */
+    /* border: 0px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold; */
+    /* box-shadow: 1px 1px green; */
+
+}
+
+/* Modificador para la clase */
+.secondaryButton:hover{
+    /* cursor: pointer; */
+    box-shadow: 4px 5px rgb(7, 45, 168);
+    /* transform: scale(1.1); */
+}
+.buscar{
+    background-color: white;
+    border: 1px solid gray;
+    padding: 4px;
+    border-radius: 8px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.buscar:focus-within{
+    border: 1px solid blue;
+    
+}
+
+.buscar > input{
+    outline: none;
+    border: 0px;
+}
+
+.iconobusqueda:hover{
+    color: blue;
+}
+
+.contenedorImagen{
+    width: 250px;
+    height: 350px;
+    display: flex;
+    border-radius: 15px;
+}
+
+.contenedorImagen:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+
+.contenedorImagen>img{
+    object-fit: cover;
+    width: 100%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.breedCardcontainer{
+    display: flex;
+}
+
+.breedCard{
+    margin: 10px;
+    background-color: rgb(78, 78, 90);
+    box-shadow: 5px 10px 5px rgb(206, 203, 203);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-radius: 15px;
+    
+}
+
+.bredTitle{
+    color: white;
+    margin:10px;
+    font-weight: bold;
+    font-size: x-large;
+}

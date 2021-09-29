@@ -1,75 +1,28 @@
-import "./Styles/styles.css";
-import logo from "./Media/logo.png";
-import borderCollie from "./Media/borderCollie.jpg";
-import Rhodesian from "./Media/rhodesian.jpg";
+import Index from "Pages/Index";
+import RhodesianInfoPage from "Pages/Rhodesian";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "Styles/styles.css";
 
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <ul className="navbar">
-          <li>
-            <img src={logo} alt="Imagen" className="logo" />
-          </li>
-          <li>
-            <button className="button mainButton">Nuevo Post</button>
-          </li>
-          <li>
-            <div className="buscar">
-              <input placeholder="Buscar una raza" />
-              <i className="fas fa-search button iconobusqueda"></i>
-            </div>
-          </li>
-          <li>
-            <button className="button secondaryButton">Login</button>
-          </li>
-          <li>
-            <button className="button mainButton">Registro</button>
-          </li>
-        </ul>
-      </header>
-      <main>
-        <section>
-          <h1>Razas de Perros</h1>
-          <ul className="breedCardcontainer">
-            <CardRazasPerros nombreRaza = 'Borderdercollie' imagen={borderCollie} />
-            <CardRazasPerros nombreRaza = "Rhodesian" imagen={Rhodesian}/>
-            <CardRazasPerros nombreRaza = "Borderdercollie" imagen = {borderCollie} color="backgroundrojo" />
-            <CardRazasPerros nombreRaza = "Rhodesian" imagen={Rhodesian} color='backgroundrojo' />
-            {/* <li className="breedCard">
-              <div className="contenedorImagen">
-                <img src={borderCollie} alt="border Collie" />
-              </div>
-              <span className="bredTitle">Border Collie</span>
-            </li>
-
-            <li className="breedCard">
-              <div className="contenedorImagen">
-                <img src={Rhodesian} alt="Rhodesian" />
-              </div>
-              <span className="bredTitle">Rhodesian</span>
-            </li>  */}
-
-          </ul>
-        </section>
-        <section></section>
-      </main>
-      <footer></footer>
+      <Router>
+        <Switch>
+          {/* Rutas */}
+          <Route path="/Rhodesian">
+            <RhodesianInfoPage />
+          </Route>
+          {/* Rutas */}
+          <Route path="/">
+            <Index />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
 
-function CardRazasPerros (props) {
-  // dentro del props {nombreRaza},{imagen}
-  return (
-    <li className="breedCard">
-      <div className="contenedorImagen">
-        <img src={props.imagen} alt={props.nombreRaza} />
-      </div>
-      <span className="bredTitle">{props.nombreRaza}</span>
-    </li>
-  );
-}
+
 
 export default App;
